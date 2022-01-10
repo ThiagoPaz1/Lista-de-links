@@ -5,7 +5,7 @@
   onde se pode adicionar novos links, editar, e
   os mesmos.
 </p>
-<img src="ezgif.com-gif-maker.gif"/>
+<img src="ezgif.com-gif-maker (1).gif"/>
 <h3>Tecnologias utilizadas:</h3>
 <ul>
   <li>
