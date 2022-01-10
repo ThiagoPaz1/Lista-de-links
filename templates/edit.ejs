@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect</title>
+</head>
+<body>
+  <h1>Editar Link</h1>
+  <form action="/edit/<%=body.id%>" method="POST">
+    <input class="field" name="title" placeholder="Title" required>
+    <input class="field" name="description" placeholder="Description">
+    <input class="field" name="url" placeholder="Url" required>
+    <button>Editar</button>
+  </form>
+</body>
+</html>

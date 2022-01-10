@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links</title>
+</head>
+<body>
+  <h1>Links</h1>
+  <a href="/add">Adicionar Link</a>
+  <% for(let i = 0; i < doc.length; i++) {%>
+    <div id="<%=doc[i]._id%>">
+      <h2><%=doc[i].title%></h2>
+      <div><%=doc[i].description%></div>
+      <div>
+        Link:
+        <a href="<%=doc[i].url%>" target="_blank">
+          <%=doc[i].title%>
+        </a>
+      </div>
+      <button onclick="deleteLink('<%=doc[i]._id%>')">Delete</button>
+      <a href="/edit/<%=doc[i]._id%>">Editar</a>
+    </div>
+  <%}%>
+
+  <script>
+    const deleteLink = (id) => {
+      fetch('/' + id, { method: 'DELETE' })
+      .then((res) => {
+        if (res.status == 200) {
+          res.text()
+          .then((linkId) => {
+            document.getElementById(linkId).remove();
+          });
+        } else {
+          res.json()
+          .then((error) => alert(error.message))
+        }  
+      });
+    }
+  </script>
+</body>
+</html>
