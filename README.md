@@ -3,7 +3,7 @@
 <p>
   Aplicação web que mostra uma lista de links, 
   onde se pode adicionar novos links, editar, e
-  os mesmos.
+  remover os mesmos.
 </p>
 <img src="ezgif.com-gif-maker (1).gif"/>
 <h3>Tecnologias utilizadas:</h3>
